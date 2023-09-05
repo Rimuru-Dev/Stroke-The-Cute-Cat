@@ -8,6 +8,12 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
 
+    <style>
+        canvas:focus {
+            outline: none;
+        }
+    </style>
+    
     <!-- Yandex Games SDK -->
     <script src="https://yandex.ru/games/sdk/v2"></script>
 
@@ -91,6 +97,12 @@
     </style>
     #endif
 
+    <style>
+        body {
+            background-color: #20c5f9;
+        }
+    </style>
+    
 </head>
 <body class="{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}">
 <div id="unity-container" class="unity-desktop">
@@ -251,6 +263,11 @@
     const progressBarFull = document.querySelector("#unity-progress-bar-full");
     const spinner = document.querySelector('.spinner');
 
+    progressBarEmpty.style.width = "calc(25vw - 20px)";
+
+    const progressBarFill = document.querySelector("#unity-progress-bar-full");
+    progressBarFill.style.backgroundColor = "purple";
+
     const canFullscreen = (function () {
         for (const key of [
             'exitFullscreen',
@@ -268,16 +285,45 @@
 
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
+
     }
 
-    var backgroundUnity = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";
+
     canvas.style.background = "url('background.png') center / cover";
+    canvas.style.backgroundImage = "url('background.png')";
+    //   canvas.style.backgroundSize = "contain";
 
     loadingCover.style.display = "";
 
-    canvas.addEventListener("touchstart", () => { window.focus() });
-    canvas.addEventListener("pointerdown", () => { window.focus() }); 
+    canvas.addEventListener("touchstart", () => {
+        window.focus()
+    });
+    canvas.addEventListener("pointerdown", () => {
+        window.focus()
+    });
+
+    // Портретный режим
+    function updateAspectRatio() {
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var containerAspectRatio = 9 / 16;
+
+        if (windowWidth / windowHeight > containerAspectRatio) {
+            container.style.width = windowHeight * containerAspectRatio + "px";
+            container.style.height = "100vh";
+        } else {
+            container.style.width = "100vw";
+            container.style.height = windowWidth / containerAspectRatio + "px";
+        }
+
+        container.style.top = "50%";
+        container.style.left = "50%";
+        container.style.transform = "translate(-50%, -50%)";
+    }
+
+    updateAspectRatio();
+    window.addEventListener("resize", updateAspectRatio);
+
 
     let player;
     let leaderboard;
