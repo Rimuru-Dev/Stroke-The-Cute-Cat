@@ -21,6 +21,9 @@ namespace RimuruDev.Internal.Codebaase.Runtime.ProgressBar
     [DisallowMultipleComponent]
     public sealed class ProgressBar : MonoBehaviour
     {
+        private const int IncreaseCatIndex = 1;
+        private const string Cataudio = "CatAudio";
+
         public Action OnResetProgressBarAndChangeHeroImage;
 
         public Image leftFillImage;
@@ -52,7 +55,8 @@ namespace RimuruDev.Internal.Codebaase.Runtime.ProgressBar
             {
                 leftFillImage.fillAmount = 0f;
                 rightFillImage.fillAmount = 0f;
-                catIndex += 1;
+
+                catIndex += IncreaseCatIndex;
 
                 if (catIndex < maxCatLength)
                     cat.sprite = cats[catIndex];
@@ -137,11 +141,28 @@ namespace RimuruDev.Internal.Codebaase.Runtime.ProgressBar
             return moveAmount;
         }
 
+        private void ResetProgressBarAndChangeHeroImage()
+        {
+            OnResetProgressBarAndChangeHeroImage?.Invoke();
+
+            catIndex += IncreaseCatIndex;
+
+            if (catIndex < maxCatLength)
+                cat.sprite = cats[catIndex];
+            else
+            {
+                catIndex = 0;
+                cat.sprite = cats[catIndex];
+            }
+        }
+
+        // TODO: Move to Audio Handler
+
         private void PlayCatSound()
         {
             if (!catSoundPlaying)
             {
-                sourceAudio.Play("CatAudio");
+                sourceAudio.Play(Cataudio);
                 catSoundPlaying = true;
             }
         }
@@ -152,21 +173,6 @@ namespace RimuruDev.Internal.Codebaase.Runtime.ProgressBar
             {
                 sourceAudio.Stop();
                 catSoundPlaying = false;
-            }
-        }
-
-        private void ResetProgressBarAndChangeHeroImage()
-        {
-            OnResetProgressBarAndChangeHeroImage?.Invoke();
-
-            catIndex += 1;
-
-            if (catIndex < maxCatLength)
-                cat.sprite = cats[catIndex];
-            else
-            {
-                catIndex = 0;
-                cat.sprite = cats[catIndex];
             }
         }
     }
