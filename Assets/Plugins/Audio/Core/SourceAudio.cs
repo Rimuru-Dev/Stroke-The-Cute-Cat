@@ -76,7 +76,7 @@ namespace Plugins.Audio.Core
 
             if (string.IsNullOrEmpty(key))
             {
-             //   Debug.LogError("key is empty, Source Audio PlaySound: " + gameObject.name);
+                //   Debug.LogError("key is empty, Source Audio PlaySound: " + gameObject.name);
                 return;
             }
 
@@ -101,7 +101,7 @@ namespace Plugins.Audio.Core
 
             if (_clip == null)
             {
-             //   Debug.LogError("Audio Management not found clip at key: " + key + ",\n Source Audio PlaySound: " +gameObject.name);
+                // Debug.LogError("Audio Management not found clip at key: " + key + ",\n Source Audio PlaySound: " +gameObject.name);
                 yield break;
             }
 
@@ -141,6 +141,7 @@ namespace Plugins.Audio.Core
         {
             _audioSource.Stop();
             _isPlaying = false;
+            _lastTime = 0;
         }
 
         private void Update()
@@ -157,8 +158,7 @@ namespace Plugins.Audio.Core
 
             if (_audioSource.time <= 0 && _isPlaying)
             {
-//                Debug.Log("Audio Loop: " + _key);
-
+                //  Debug.Log("Audio Loop: " + _key);
                 _audioSource.time = 0;
                 _audioSource.Play();
             }
@@ -169,7 +169,7 @@ namespace Plugins.Audio.Core
             if (_isFocus == false && _isPlaying && _lastTime > 0)
             {
                 _audioSource.time = _lastTime;
-              //  Debug.Log(_key + " Last Time: " + _lastTime);
+                //  Debug.Log(_key + " Last Time: " + _lastTime);
             }
 
             _isFocus = true;
@@ -180,7 +180,7 @@ namespace Plugins.Audio.Core
             if (_isFocus && _isPlaying)
             {
                 _lastTime = _audioSource.time;
-             //   Debug.Log(_key + "Set Last Time: " + _lastTime);
+                // Debug.Log(_key + "Set Last Time: " + _lastTime);
             }
 
             _isFocus = false;

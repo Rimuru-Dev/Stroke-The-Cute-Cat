@@ -8,7 +8,7 @@
 #if UNITY_EDITOR
 using UnityEngine;
 
-namespace AbyssMoth.Internal.Codebase.Helpers
+namespace Internal.Codebaase.Helpers
 {
     public sealed class ScreenshotTaker : MonoBehaviour
     {
