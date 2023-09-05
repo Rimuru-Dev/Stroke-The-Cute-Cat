@@ -2,7 +2,8 @@
 
 [YouTube](https://youtube.com/shorts/YUfklZYu5Ks?feature=share) | [Telegram](https://t.me/DevLogUnity)
 
-![background](https://github.com/Rimuru-Dev/Stroke-The-Cute-Cat/assets/85500556/25d36041-eb79-461c-b8b4-d5ada2b4585d)
+![BN](https://github.com/Rimuru-Dev/Stroke-The-Cute-Cat/assets/85500556/2c81a1ad-3f30-49e7-9752-291f1d2ca0fd)
+
 
 
 
