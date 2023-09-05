@@ -11,11 +11,11 @@
 
 using System;
 using Plugins.Audio.Core;
-using RimuruDev.Internal.Codebaase.Rintime.Animations.Cat;
+using RimuruDev.Internal.Codebaase.Runtime.Animations.Cat;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RimuruDev.Internal.Codebaase.Rintime.ProgressBar
+namespace RimuruDev.Internal.Codebaase.Runtime.ProgressBar
 {
     [SelectionBase]
     [DisallowMultipleComponent]

@@ -9,12 +9,12 @@
 //
 // **************************************************************** //
 
-using UnityEngine;
-using DG.Tweening;
-using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
+using UnityEngine;
+using UnityEngine.UI;
 
-namespace RimuruDev.Internal.Codebaase.Rintime.Animations.Cat
+namespace RimuruDev.Internal.Codebaase.Runtime.Animations.Cat
 {
     [SelectionBase]
     [DisallowMultipleComponent]

@@ -12,7 +12,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RimuruDev.Internal.Codebaase.Rintime.Background
+namespace RimuruDev.Internal.Codebaase.Runtime.Background
 {
     [SelectionBase]
     [DisallowMultipleComponent]

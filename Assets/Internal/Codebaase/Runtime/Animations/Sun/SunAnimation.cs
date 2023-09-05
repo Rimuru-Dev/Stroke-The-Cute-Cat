@@ -13,11 +13,11 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace RimuruDev.Internal.Codebaase.Rintime.Animations.Sun
+namespace RimuruDev.Internal.Codebaase.Runtime.Animations.Sun
 {
     [SelectionBase]
     [DisallowMultipleComponent]
-    public class SunAnimation : MonoBehaviour
+    public sealed class SunAnimation : MonoBehaviour
     {
         public RectTransform sunRectTransform;
         public RectTransform centerRectTransform;

@@ -9,15 +9,16 @@
 //
 // **************************************************************** //
 
-using System;
+using UnityEngine;
 
-namespace RimuruDev.Internal.Codebaase.Rintime.Background
+namespace RimuruDev.Internal.Codebaase.Runtime.Animations.Sun
 {
-    [Serializable]
-    public enum LoopMode
+    [DisallowMultipleComponent]
+    public sealed class RotateSun : MonoBehaviour
     {
-        Update = 0,
-        FixedUpdate = 1,
-        LateUpdate = 2,
+        public float rotationSpeed = 10f;
+
+        private void Update() =>
+            transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
     }
 }

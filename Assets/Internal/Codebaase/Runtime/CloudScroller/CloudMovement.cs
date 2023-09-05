@@ -12,7 +12,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace RimuruDev.Internal.Codebaase.Rintime.CloudScroller
+namespace RimuruDev.Internal.Codebaase.Runtime.CloudScroller
 {
     [SelectionBase]
     [DisallowMultipleComponent]
