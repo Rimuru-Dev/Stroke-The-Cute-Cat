@@ -1,4 +1,4 @@
-# Stroke The Cute Cat
+# 💖 Stroke The Cute Cat 💖
 
  <p align="center">
   <a>
