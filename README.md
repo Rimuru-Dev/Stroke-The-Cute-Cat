@@ -36,3 +36,6 @@
     <img alt="" src="https://img.shields.io/github/watchers/RimuruDev/Stroke-The-Cute-Cat?style=flat">
   </a>
 </p>
+
+# Warning
+- Yandex Plugin is Outdated!
