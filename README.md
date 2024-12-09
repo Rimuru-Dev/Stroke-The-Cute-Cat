@@ -1,7 +1,5 @@
 # 💖 Stroke The Cute Cat 💖
 
-[YouTube](https://youtube.com/shorts/YUfklZYu5Ks?feature=share) | [Telegram](https://t.me/DevLogUnity)
-
 ![BN](https://github.com/Rimuru-Dev/Stroke-The-Cute-Cat/assets/85500556/2c81a1ad-3f30-49e7-9752-291f1d2ca0fd)
 
 
