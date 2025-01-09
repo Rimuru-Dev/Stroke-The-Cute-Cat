@@ -1,7 +1,10 @@
 # 💖 Stroke The Cute Cat 💖
 
-![BN](https://github.com/Rimuru-Dev/Stroke-The-Cute-Cat/assets/85500556/2c81a1ad-3f30-49e7-9752-291f1d2ca0fd)
 
+# Warning
+- Yandex Plugin is Outdated!
+
+![BN](https://github.com/Rimuru-Dev/Stroke-The-Cute-Cat/assets/85500556/2c81a1ad-3f30-49e7-9752-291f1d2ca0fd)
 
 
 
@@ -34,6 +37,3 @@
     <img alt="" src="https://img.shields.io/github/watchers/RimuruDev/Stroke-The-Cute-Cat?style=flat">
   </a>
 </p>
-
-# Warning
-- Yandex Plugin is Outdated!
