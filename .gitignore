@@ -844,4 +844,6 @@ $RECYCLE.BIN/
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
 # End of https://www.gitignore.io/api/git,unity,macos,csharp,windows,visualstudio,visualstudiocode
-@RimuruDev
+# @RimuruDev
+/Assets/NOTE
+Assets/NOTE.meta
