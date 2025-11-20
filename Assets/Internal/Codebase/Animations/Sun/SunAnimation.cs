@@ -10,6 +10,7 @@
 // **************************************************************** //
 
 using DG.Tweening;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -19,15 +20,15 @@ namespace AbyssMoth.Internal.Codebase.Animations.Sun
     [DisallowMultipleComponent]
     public sealed class SunAnimation : MonoBehaviour
     {
-        public RectTransform sunRectTransform;
-        public RectTransform centerRectTransform;
+        [Required] public RectTransform sunRectTransform;
+        [Required] public RectTransform centerRectTransform;
         public Vector2 initialPosition;
         public Vector2 centerPosition;
         public float scaleMultiplier = 1.5f;
         public float animationDuration = 1f;
 
         [FormerlySerializedAs("specialProgressBar")]
-        public ProgressBar.ProgressBar progressBar;
+        [Required] public ProgressBar.ProgressBar progressBar;
 
         private void Start()
         {

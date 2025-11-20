@@ -9,6 +9,7 @@
 //
 // **************************************************************** //
 
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +22,7 @@ namespace AbyssMoth.Internal.Codebase.Background
     {
         [SerializeField] private LoopMode loopMode = LoopMode.Update;
         [SerializeField] private Vector2 scrollPositionXY;
-        [SerializeField] private RawImage rawImage;
+        [SerializeField, Required] private RawImage rawImage;
 
         private void Start()
         {

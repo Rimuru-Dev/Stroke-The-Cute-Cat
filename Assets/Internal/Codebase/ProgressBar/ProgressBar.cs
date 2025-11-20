@@ -11,6 +11,7 @@
 
 using System;
 using AbyssMoth.Internal.Codebase.Animations.Cat;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,23 +26,23 @@ namespace AbyssMoth.Internal.Codebase.ProgressBar
 
         public Action OnResetProgressBarAndChangeHeroImage;
 
-        public Image leftFillImage;
-        public Image rightFillImage;
+        [Required] public Image leftFillImage;
+        [Required] public Image rightFillImage;
         public float fillSpeed = 0.001f;
         public float resetThreshold = 0.99f;
-        public AudioSource sourceAudio;
+        [Required] public AudioSource sourceAudio;
 
-        public Image emojy;
-        public Sprite eyeEmojy;
-        public Sprite cawayEmojy;
+        [Required] public Image emojy;
+        [ShowAssetPreview, Required] public Sprite eyeEmojy;
+        [ShowAssetPreview, Required] public Sprite cawayEmojy;
 
-        public Image cat;
+        [Required] public Image cat;
 
-        public Sprite[] cats;
+        [ShowAssetPreview] public Sprite[] cats;
         public int catIndex = 0;
         public int maxCatLength;
 
-        public CatAnimation catAnimation;
+        [Required] public CatAnimation catAnimation;
 
         private bool isTouching;
         private bool catSoundPlaying;

@@ -11,6 +11,7 @@
 
 using System.Collections;
 using DG.Tweening;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,7 @@ namespace AbyssMoth.Internal.Codebase.Animations.Cat
     [DisallowMultipleComponent]
     public sealed class CatAnimation : MonoBehaviour
     {
-        public Image catImage;
+        [Required] public Image catImage;
         public float vibrateDuration = 0.2f;
         public float vibrateStrength = 20f;
         public Ease vibrateEase = Ease.OutBounce;

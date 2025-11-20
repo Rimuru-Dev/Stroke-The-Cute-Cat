@@ -16,7 +16,7 @@ namespace AbyssMoth.Internal.Codebase.Animations.Sun
     [DisallowMultipleComponent]
     public sealed class RotateSun : MonoBehaviour
     {
-        public float rotationSpeed = 10f;
+        [Range(0.1f, 100f)] public float rotationSpeed = 10f;
 
         private void Update() =>
             transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
